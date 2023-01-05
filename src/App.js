@@ -1,11 +1,12 @@
-import { Button } from "@mui/material";
 
+import ThemeProvider from "./theme";
+import Navbar from "./shared/Navbar";
 
 function App() {
   return (
-   <>
-    <h1>My First Projec</h1>
-   </>
+    <ThemeProvider>
+      <Navbar />
+    </ThemeProvider>
   );
 }
 
