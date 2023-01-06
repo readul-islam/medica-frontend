@@ -6,6 +6,9 @@ function App() {
   return (
     <ThemeProvider>
       <Navbar />
+      <main id="main">
+
+      </main>
     </ThemeProvider>
   );
 }
