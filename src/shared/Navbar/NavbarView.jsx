@@ -17,7 +17,7 @@ import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { useTheme } from "@mui/material/styles";
+
 import Toolbar from "@mui/material/Toolbar";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
@@ -37,31 +37,8 @@ const profile = [
   { id: 4, name: "Logout", icon: <LogoutIcon /> },
 ];
 
-function NavbarView({ colorMode }) {
-  const [anchorElNav, setAnchorElNav] = React.useState(false);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [seeProfile, setSeeProfile] = React.useState(false);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-  const theme = useTheme();
-
-  const handleProfileMenu = (data) => {
-    console.log(data);
-    setSeeProfile(false);
-  };
+function NavbarView({ colorMode,handleProfileMenu,setSeeProfile,seeProfile,theme}) {
+  
 
   return (
 
@@ -77,7 +54,7 @@ function NavbarView({ colorMode }) {
                   aria-label="account of current user"
                   aria-controls="menu-appbar"
                   aria-haspopup="true"
-                  onClick={handleOpenNavMenu}
+                  // onClick={handleOpenNavMenu}
                   color="inherit"
                 >
                   <MenuIcon />
@@ -96,7 +73,7 @@ function NavbarView({ colorMode }) {
                   {pages.map((page) => (
                     <Button
                       key={page}
-                      onClick={handleCloseNavMenu}
+                      // onClick={handleCloseNavMenu}
                       sx={{ my: 2, color: "white", display: "block" }}
                     >
                       {page}
