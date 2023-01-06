@@ -118,9 +118,9 @@ function NavbarView({ colorMode,handleProfileMenu,setSeeProfile,seeProfile,theme
                   {seeProfile && (
                     <Paper
                       sx={{
-                        minWidth: "300px",
+                        maxWidth: "300px",
                         position: "absolute",
-                        left: { xs: -250, md: 0 },
+                        left: { xs: -70, md: 0 },
                         top: 60,
                       }}
                       elevation={3}
