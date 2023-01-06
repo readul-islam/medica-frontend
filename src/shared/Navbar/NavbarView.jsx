@@ -84,7 +84,7 @@ function NavbarView({ colorMode,handleProfileMenu,setSeeProfile,seeProfile,theme
                 {/* avatar */}
                 <Box sx={{ position: "relative" }}>
                   <Tooltip title="Open profile">
-                    <IconButton onClick={setSeeProfile} sx={{ p: 0 }}>
+                    <IconButton onClick={()=>setSeeProfile(!seeProfile)} sx={{ p: 0 }}>
                       <Avatar
                         alt="Remy Sharp"
                         src="/static/images/avatar/2.jpg"
